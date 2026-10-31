@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iphone Duo-Apple(IN)</title>
+     <link rel="icon" type="image/svg+xml" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAEiklEQVRYha2XW2wUVRzGf7OX2SVt2d1ut11cMrVkt4XAA0oLiURC4UHI8iDpi4oJobXFRjCRRAJKTBDpW8VwEVGIwcjFd0OCSRHKMxEoCbSYmm7YsL1QdrdAZ/Yy40OnWNqZ7QzyPc75zv/79uw5/4tw+/ZdbOI14E0gBpTr354A94G/gKSdYC6LvAjQCrzvdruWeb1ePB4Rh8MBgKqqKEoOWZbJ5wv3gAvAGStmhHlOwA98DXRUV1d5/P6FeDxiyYCKkiOdzjIyMqYAPwJfAemXMbABOBcKBcM1NVUIglBSeDY0TWN4eIzR0Ucp4EOgx4jnMNnfAfwhSZFwOByyLQ4gCALhcAhJioSBy8BOqwY6Kyv9p2Kx150+X4UlMVVVOX/+At3d385Z8/kqiMXqnJWV/h+AzvkMbASOBYMBvF6vJXFZlmltbWPfvv309fUZcrxeD8FgAOCYrmFowA+ck6SI0+v1WBIHOHr0GFeu/AnA9u3bTXlerwdJijiBX3WtOQYOhULBGqvHDlO//vTpMwDs2vUJzc3rS/J9vgpCoWCYqZcF/PcKJOD+ihUN4nwXbnDwH1S1SF1dHU6nkyNHvqOpqZFoNMrDhykqKwPU1taa7tc0jTt3+nPAEiA5nYh2VFdXlRTv7b1Od3c3fX13UFWVhoZ64vE4tbUSZ8/+Qm/vdSYnJxFFkbVr3+LAgS+JxWJz4giCQHV1lTgyMvYRcHD6BO7W1y9ZapZkrl69xo4drRSLxZKnMxOxWIxLl37H45l7nxQlx8DAYD+w1AEsdrtdpuJPnz5l//4vbImXlZXR1XUYUTSO6fGIuN2uBmCxA1hZ6sldu9ZLMmmrvtDR0c6aNatLJjBdc6UDiJXK7zdu3LAlDrB586Z5ObpmvQOomK5qRpiYmLAlLgiCpSSma5abK+sIBAK2DGiaRn//gGW+A5hQVdWUsHz5clsGAI4fP0GhUCjJ0TWfOID7ipIzJTY1NVquC9O4desW7e07SSQSphxdc8AB3JRl2ZS4aNEi1q1725YBgJ6enuc1wgi65k0H8CCfL9wrdQqdnR/bNhAIBNi69V3DNUXJkc8XBoAH05fwYjqdNQ22atUqWlpabBnYu/dzfD6f4Vomk4WpvvF5Nfx5ZGQsr2maacBDhw4SjUYticfjcbZt+8BwTW/VcsBPAM7Ozl0AGaBG01hdXl5muFEURTZu3MDg4CAAzc3r2bPnM9ra2mhsbESWZVwuF1u2xOnqOozLZdxwDw+P8ezZ5EngN3ixKfUD9yQpYqsnsINMZoJEIpkClqF3yjMTURrYlkgki7KsvHJxWVZIJJJFpjrk52367EzYA+x+9Ogxr9KELCuMjz8G2M2s9tzojzo5Pp5Wx8fTJyQpYrkzNkM2O8HQULIIfAqcnL1uVgtOAe8kEslUKjVKqddhBk3TSKVGGRpKpoBNwPdGPCuj2TdAe01NlejzWRvNMpnszKd2gJcczWYiArQD77ndroYFC7yI4ovDaS6XY3JSJp8v9AMXdfH/PZwaYTHwBhAFFurfssDfTI3nD+wE+xfxCKNpO+N8NAAAAABJRU5ErkJggg==">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            color: #1d1d1f;
+            background: #fff;
+            font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        .header {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            width: min(1280px, calc(100% - 48px));
+            min-height: 56px;
+            padding: 0 24px;
+            transform: translateX(-50%);
+            border: 1px solid rgba(23, 65, 59, 0.1);
+            border-radius: 50px;
+            background: rgba(247, 247, 241, 0.9);
+            box-shadow: 0 8px 28px rgba(28, 49, 43, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .apple-logo {
+            flex: 0 0 20px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .categeries {
+            display: flex;
+            flex: 1;
+            justify-content: space-between;
+            gap: 18px;
+            padding: 0;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        .serch-shoping {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .serch-shoping svg {
+            height: 32px;
+        }
+
+        .top-bar {
+            width: 100%;
+            padding: 92px 24px 40px;
+            text-align: center;
+        }
+
+        .text {
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        .text h4 {
+            margin: 0;
+            font-size: 21px;
+            line-height: 1.3;
+            font-weight: 600;
+            letter-spacing: 0.011em;
+        }
+
+        .text p {
+            margin: 4px 0 0;
+            line-height: 1.05;
+            font-weight: 600;
+            letter-spacing: -0.045em;
+            font-size:81px;
+        }
+
+        .Pre-order {
+            margin: 22px 0 18px;
+            font-size: 14px;
+            line-height: 1.2857742857;
+            font-weight: 400;
+            letter-spacing: -0.016em;
+            font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        .video-1 img {
+            display: block;
+            width: min(100%, 1500px);
+            height: auto;
+            margin: 0 auto;
+            margin-top: -20px;
+        }
+
+        .video-1 {
+            position: relative;
+        }
+
+        .video-1 video {
+            display: none;
+        }
+
+        .price-callout {
+            position: absolute;
+            z-index: 2;
+            bottom: 4%;
+            left: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            width: fit-content;
+            max-width: calc(100% - 32px);
+            transform: translateX(-50%);
+            padding: 8px 10px 8px 20px;
+            border-radius: 999px;
+            background: rgba(214, 214, 214, 0.9);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+            font-size: 12px;
+            line-height: 1.3;
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        .price-callout p {
+            margin: 0;
+        }
+
+        .price-callout button {
+            padding: 10px 20px;
+            border: 0;
+            border-radius: 999px;
+            color: #fff;
+            background: #2874e8;
+            font: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 900px) {
+            .header {
+                gap: 16px;
+                padding: 0 18px;
+            }
+
+            .categeries {
+                justify-content: flex-start;
+                overflow-x: auto;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                width: calc(100% - 24px);
+                min-height: 50px;
+                padding: 0 14px;
+            }
+
+            .categeries {
+                gap: 16px;
+                font-size: 12px;
+            }
+
+            .top-bar {
+                padding: 82px 16px 28px;
+            }
+
+            .text p {
+                font-size: clamp(44px, 12vw, 58px);
+            }
+
+            .Pre-order {
+                margin-top: 18px;
+            }
+        }
+
+        svg{
+            font-weight: bold;
+        }
+
+        .highlights {
+            overflow: hidden;
+            padding: 100px 0 100px;
+            background: #f5f5f7;
+            margin-top: -40px;
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity 700ms ease, transform 700ms ease;
+        }
+
+        .highlights.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .highlights-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: min(840px, calc(100% - 32px));
+            min-height: 44px;
+            margin: 0 auto 22px;
+            padding: 0 16px;
+            border: 1px solid rgba(29, 29, 31, 0.08);
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            transition: opacity 450ms ease, transform 450ms cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 300ms ease;
+        }
+
+        .highlights-nav.is-fixed {
+            position: fixed;
+            top: 18px;
+            left: 50%;
+            z-index: 999;
+            margin: 0;
+            opacity: 0;
+            transform: translate(-50%, -18px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .highlights-nav.is-fixed.is-visible {
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+
+        .highlights-nav strong {
+            font-size: 14px;
+        }
+
+        .highlights-nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .highlights-nav a {
+            padding: 6px 12px;
+            border: 1px solid #d2d2d7;
+            border-radius: 999px;
+            color: #1d1d1f;
+            font-size: 11px;
+            text-decoration: none;
+        }
+
+        .highlights-nav a:last-child {
+            border-color: #2874e8;
+            color: #fff;
+            background: #2874e8;
+        }
+
+        .highlights-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: min(1030px, calc(100% - 32px));
+            margin: 0 auto 28px;
+        }
+
+        .highlights-heading h2 {
+            margin: 0;
+            font-size: clamp(30px, 4vw, 40px);
+            line-height: 1.1;
+            font-weight: 600;
+            letter-spacing: -0.04em;
+        }
+
+        .watch-film {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #06c;
+            font-size: 14px;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .icon-playcircle {
+            position: relative;
+            display: inline-block;
+            flex: 0 0 16px;
+            width: 16px;
+            height: 16px;
+            color: currentColor;
+        }
+
+        .icon-playcircle::before {
+            position: absolute;
+            inset: 1px;
+            border: 1.5px solid currentColor;
+            border-radius: 50%;
+            content: "";
+        }
+
+        .icon-playcircle::after {
+            position: absolute;
+            top: 5px;
+            left: 7px;
+            width: 0;
+            height: 0;
+            border-top: 3px solid transparent;
+            border-bottom: 3px solid transparent;
+            border-left: 4px solid currentColor;
+            content: "";
+        }
+
+        .highlights-viewport {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .highlights-track {
+            display: flex;
+            gap: 16px;
+            width: 100%;
+            margin-left: max(16px, calc((100vw - 1030px) / 2));
+            transition: transform 500ms cubic-bezier(0.2, 0.7, 0.2, 1);
+            will-change: transform;
+        }
+
+        .highlight-card {
+            position: relative;
+            display: block;
+            flex: 0 0 min(1030px, calc(100vw - 48px));
+            min-height: 500px;
+            overflow: hidden;
+            padding: 0;
+            border-radius: 24px;
+            background: #fff;
+            text-align: left;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(42px) scale(0.98);
+            transition: opacity 700ms ease, transform 700ms ease;
+        }
+
+        .highlight-card.is-visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .highlight-card::after {
+            position: absolute;
+            inset: 0;
+            content: "";
+            pointer-events: none;
+        }
+
+        .highlight-card h3 {
+            position: absolute;
+            top: 36px;
+            left: 50%;
+            z-index: 1;
+            width: max-content;
+            max-width: calc(100% - 56px);
+            margin: 0;
+            transform: translateX(-50%);
+            color: #000;
+            font-size: clamp(21px, 2.2vw, 25px);
+            line-height: 1.15;
+            font-weight: 600;
+            letter-spacing: -0.025em;
+            text-align: center;
+        }
+
+        .highlight-card:last-child h3 {
+            background: linear-gradient(90deg, #8a4428 0%, #665a34 38%, #3c6871 72%, #373d9a 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .highlight-card:last-child p {
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            z-index: 1;
+            margin: 0;
+            transform: translateX(-50%);
+            color: #6e6e73;
+            font-size: 16px;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .device-demo {
+            position: absolute;
+            inset: 0;
+        }
+
+        .highlight-card > img,
+        .highlight-card .device-demo img {
+            position: absolute;
+            inset: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .highlight-card:focus-visible {
+            outline: 3px solid #06c;
+            outline-offset: 4px;
+        }
+
+        .foldable-screen {
+            position: relative;
+            display: flex;
+            width: min(480px, 80%);
+            height: 330px;
+            padding: 7px;
+            border: 2px solid #444;
+            border-radius: 36px;
+            background: #141414;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transform: perspective(1100px) rotateX(1deg);
+        }
+
+        .foldable-screen::after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 3px;
+            background: rgba(23, 23, 23, 0.6);
+            content: "";
+        }
+
+        .foldable-panel {
+            position: relative;
+            flex: 1;
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse at 48% 78%, #d9c5a1 0 15%, transparent 16%),
+                linear-gradient(170deg, transparent 0 49%, #746d5d 50% 57%, transparent 58%),
+                linear-gradient(180deg, #9eb7c8 0%, #d5d3c7 50%, #eee0c7 72%, #b4a487 100%);
+        }
+
+        .foldable-panel:first-child {
+            border-radius: 28px 0 0 28px;
+        }
+
+        .foldable-panel:last-child {
+            border-radius: 0 28px 28px 0;
+        }
+
+        .lock-time {
+            position: absolute;
+            top: 28px;
+            left: 0;
+            width: 100%;
+            color: #fff;
+            font-size: clamp(56px, 8vw, 92px);
+            font-weight: 300;
+            letter-spacing: -0.08em;
+            line-height: 1;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.12);
+        }
+
+        .lock-date {
+            position: absolute;
+            top: 18px;
+            left: 0;
+            width: 100%;
+            color: rgba(255, 255, 255, 0.92);
+            font-size: 10px;
+        }
+
+        .home-indicator {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            width: 90px;
+            height: 4px;
+            border-radius: 4px;
+            background: #fff;
+            transform: translateX(-50%);
+        }
+
+        .watch-demo {
+            position: relative;
+            width: min(380px, 75%);
+            height: 245px;
+            padding: 15px;
+            border: 8px solid #171719;
+            border-radius: 56px;
+            background: #050505;
+            box-shadow: 0 18px 36px rgba(0, 0, 0, 0.2);
+            color: #fff;
+            transform: rotate(-5deg);
+        }
+
+        .watch-demo::before,
+        .watch-demo::after {
+            position: absolute;
+            top: 50%;
+            width: 14px;
+            height: 54px;
+            border-radius: 8px;
+            background: #333;
+            content: "";
+            transform: translateY(-50%);
+        }
+
+        .watch-demo::before {
+            left: -19px;
+        }
+
+        .watch-demo::after {
+            right: -19px;
+        }
+
+        .watch-date {
+            color: #ffd60a;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .watch-time {
+            margin-top: 2px;
+            color: #fff;
+            font-size: 84px;
+            font-weight: 300;
+            letter-spacing: -0.09em;
+            line-height: 1;
+        }
+
+        .watch-caption {
+            margin-top: 12px;
+            color: #aaa;
+            font-size: 11px;
+        }
+
+        .feature-orb {
+            display: grid;
+            width: min(300px, 65vw);
+            aspect-ratio: 1;
+            place-items: center;
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 30%, #fff 0, #e9e9ee 24%, #aeb9cb 52%, #4b617d 75%, #182336 100%);
+            box-shadow: 0 24px 55px rgba(36, 48, 68, 0.2);
+            color: #fff;
+            font-size: 80px;
+        }
+
+        
+
+        .carousel-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin: 24px auto 0;
+        }
+
+        .carousel-dots {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            min-height: 44px;
+            padding: 0 16px;
+            border-radius: 999px;
+            background: #e8e8ed;
+        }
+
+        .carousel-dot {
+            width: 7px;
+            height: 7px;
+            padding: 0;
+            border: 0;
+            border-radius: 50%;
+            background: #929297;
+            cursor: pointer;
+            transition: width 200ms ease, background 200ms ease;
+        }
+
+        .carousel-dot[aria-current="true"] {
+            width: 38px;
+            border-radius: 999px;
+            background: #86868b;
+        }
+
+        .carousel-dot[aria-current="true"]::after {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            background: #1d1d1f;
+            content: "";
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+
+        .carousel-dot.is-playing[aria-current="true"]::after {
+            animation: carousel-progress 3000ms linear forwards;
+        }
+
+        @keyframes carousel-progress {
+            to {
+                transform: scaleX(1);
+            }
+        }
+
+        .carousel-play {
+            display: grid;
+            width: 44px;
+            height: 44px;
+            place-items: center;
+            border: 0;
+            border-radius: 50%;
+            background: #e8e8ed;
+            color: #1d1d1f;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .carousel-dot:focus-visible,
+        .carousel-play:focus-visible,
+        .watch-film:focus-visible,
+        .highlights-nav a:focus-visible {
+            outline: 3px solid #06c;
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 600px) {
+            .highlights {
+                padding-top: 12px;
+            }
+
+            .highlights-heading {
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .highlights-heading h2 {
+                font-size: 30px;
+            }
+
+            .watch-film {
+                padding-top: 8px;
+                font-size: 12px;
+            }
+
+            .highlight-card {
+                min-height: 390px;
+                border-radius: 20px;
+            }
+
+            .highlight-card h3 {
+                top: 24px;
+                max-width: calc(100% - 36px);
+            }
+
+            .foldable-screen {
+                width: min(390px, 92%);
+                height: 250px;
+            }
+
+            .watch-demo {
+                height: 205px;
+            }
+
+            .watch-time {
+                font-size: 68px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .highlights-track,
+            .carousel-dot {
+                transition: none;
+            }
+        }
+        .design{
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+            padding: 100px 0px;
+            color: #1d1d1f;
+            background-color: #ffffff;
+        }
+        .textes{
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            margin-bottom: 12px;
+            color: #1d1d1f;
+        }
+        .headline {
+            font-size: 80px;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 24px;
+        }
+        .body-text {
+            font-size: 18px;
+            line-height: 1.381002381;
+            font-weight: 400;
+            letter-spacing: .011em;
+            font-family: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        /* Highlighted or bold text inside the body */
+        .body-text strong {
+            color: #1d1d1f;
+            font-weight: 600;
+        }
+        .images{
+            position: relative;
+            left: 50%;
+            width: min(1200px, calc(100vw - 32px));
+            transform: translateX(-50%);
+        }
+        .images img {
+            display: block;
+            width: 100%;
+            height: auto;
+            opacity: 0;
+            transition: opacity 350ms ease;
+        }
+        .images img:first-child {
+            position: relative;
+        }
+        .images img:not(:first-child) {
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            object-fit: contain;
+        }
+        .images img.is-active {
+            opacity: 1;
+        }
+        .colornav-wrapper {
+            z-index: 2;
+            grid-row: 3;
+            grid-column: 1;
+            display: flex;
+            justify-content: center;
+        }
+        .colornav {
+            border: 0;
+            margin-inline-start: auto;
+            margin-inline-end: auto;
+            padding: 0;
+            z-index: 1;
+        }
+        .colornav-neutral {
+            --colornav-border-current: rgb(29, 29, 31);
+        }
+        .colornav {
+            --colornav-background: rgb(245, 245, 247);
+            --colornav-border-color: conic-gradient(from 270deg, rgba(0, 0, 0, 0.08) 0deg, rgba(0, 0, 0, 0.48) 64.8deg, rgba(0, 0, 0, 0.48) 115.2deg, rgba(0, 0, 0, 0.08) 180deg, rgba(0, 0, 0, 0) 208.8deg, rgba(0, 0, 0, 0) 331.2deg, rgba(0, 0, 0, 0.08) 360deg);
+            --colornav-border-current: rgb(0, 113, 227);
+            --colornav-label-color: rgb(29, 29, 31);
+            --colornav-swatch-size: 28px;
+            --colornav-item-size: 36px;
+            display: inline-flex;
+            text-align: center;
+            justify-content: center;
+        }
+        .colornav-items{
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            list-style: none;
+            margin: 0;
+            padding: 18px 0 56px;
+        }
+        .colornav-item {
+            position: relative;
+            flex: 0 0 var(--colornav-item-size);
+            width: var(--colornav-item-size);
+            height: var(--colornav-item-size);
+        }
+        .colornav-value {
+            position: absolute;
+            clip: rect(1px, 1px, 1px, 1px);
+            clip-path: inset(0 0 99.9% 99.9%);
+            overflow: hidden;
+            height: 1px;
+            width: 1px;
+            padding: 0;
+            border: 0;
+        }
+        .colornav-link.current, .colornav-value:checked~.colornav-link {
+            color: rgb(29, 29, 31);
+            border-color: rgb(29, 29, 31);
+            cursor: default;
+        }
+        .colornav .colornav-swatch-night-sky {
+            background: #394452;
+        }
+        .colornav .colornav-swatch-star-white {
+            background: #f7f6f5;
+        }
+        .colornav-swatch{
+            background: var(--colornav-background) 50%;
+            border-radius: 50%;
+            display: block;
+            width: var(--colornav-swatch-size);
+            height: var(--colornav-swatch-size);
+        }
+        .colornav-link.current .colornav-label, .colornav-value:checked~.colornav-link .colornav-label {
+            clip: auto;
+            clip-path: none;
+            margin: 0;
+            padding-top: 8px;
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            white-space: nowrap;
+            width: max-content;
+            height: auto;
+            z-index: 1;
+            overflow: visible;
+        }
+        .colornav-link.current .colornav-label, .colornav-value:checked~.colornav-link .colornav-label {
+            color: var(--colornav-label-color);
+            
+            line-height: 1.1;
+            font-weight: 400;
+            letter-spacing: -0.025em;
+            font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+        .colornav-link {
+            border: 2px solid transparent;
+            color: rgb(29, 29, 31);
+            border-radius: 50%;
+            box-sizing: border-box;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            padding: 0;
+            width: var(--colornav-item-size);
+            height: var(--colornav-item-size);
+            position: relative;
+            z-index: 1;
+        }
+        .colornav-link:focus-visible {
+            outline: 3px solid #06c;
+            outline-offset: 4px;
+        }
+        .colornav-label, .colornav-label-hidden {
+            position: absolute;
+            clip: rect(1px, 1px, 1px, 1px);
+            clip-path: inset(0 0 99.9% 99.9%);
+            overflow: hidden;
+            height: 1px;
+            width: 1px;
+            padding: 0;
+            border: 0;
+        }
+
+        .look {
+            width: 100%;
+            margin: 24px 0 0;
+            padding: 44px 24px 80px;
+            background: linear-gradient(180deg,white,lightgray);
+            text-align: left;
+        }
+
+        .look h2 {
+            width: min(930px, calc(100% - 132px));
+            margin: 0 auto 32px;
+            font-size: clamp(28px, 3vw, 36px);
+            line-height: 1.15;
+            font-weight: 600;
+            letter-spacing: -0.035em;
+        }
+
+        .look-panel {
+            position: relative;
+            display: grid;
+            grid-template-columns: minmax(270px, 0.75fr) minmax(0, 1.25fr);
+            align-items: center;
+            gap: 40px;
+            width: min(1152px, 100%);
+            min-height: 560px;
+            margin: 0 auto;
+            padding: 52px 72px;
+            overflow: hidden;
+            border-radius: 22px;
+            background: #fff;
+        }
+
+        .look-panel-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            display: grid;
+            width: 30px;
+            height: 30px;
+            place-items: center;
+            border: 0;
+            border-radius: 50%;
+            background: #f0f0f2;
+            color: #1d1d1f;
+            cursor: pointer;
+            font-size: 20px;
+            line-height: 1;
+        }
+
+        .look-content {
+            z-index: 1;
+            align-self: start;
+        }
+
+        .look-intro {
+            width: min(100%, 340px);
+            margin-bottom: 10px;
+            padding: 18px 20px 16px;
+            border-radius: 20px;
+            background: #f0f0f3;
+            color: #1d1d1f;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        .look-intro p {
+            margin: 0;
+        }
+
+        .look-fold-instruction {
+            display: block;
+            margin-top: 10px;
+            color: #6e6e73;
+            font-size: 10px;
+        }
+
+        .look-fold-slider {
+            display: block;
+            width: 100%;
+            height: 28px;
+            margin: 6px 0 0;
+            appearance: none;
+            background: transparent;
+            cursor: grab;
+            touch-action: pan-y;
+        }
+
+        .look-fold-slider:active {
+            cursor: grabbing;
+        }
+
+        .look-fold-slider::-webkit-slider-runnable-track {
+            height: 12px;
+            border: 1px solid #c5c5ca;
+            border-radius: 8px;
+            background: #d6d6db;
+        }
+
+        .look-fold-slider::-moz-range-track {
+            height: 10px;
+            border: 1px solid #c5c5ca;
+            border-radius: 8px;
+            background: #d6d6db;
+        }
+
+        .look-fold-slider::-webkit-slider-thumb {
+            width: 44px;
+            height: 28px;
+            margin-top: -9px;
+            appearance: none;
+            border: 0;
+            border-radius: 16px;
+            background: #2874e8 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='16' viewBox='0 0 24 16'%3E%3Cpath d='m10 3-5 5 5 5M14 3l5 5-5 5' fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/svg%3E") center / 24px 16px no-repeat;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
+        }
+
+        .look-fold-slider::-moz-range-thumb {
+            width: 44px;
+            height: 28px;
+            border: 0;
+            border-radius: 16px;
+            background: #2874e8 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='16' viewBox='0 0 24 16'%3E%3Cpath d='m10 3-5 5 5 5M14 3l5 5-5 5' fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3C/svg%3E") center / 24px 16px no-repeat;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
+        }
+
+        .look-pose-list {
+            position: static;
+            display: grid;
+            justify-items: start;
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .look-pose-item {
+            display: grid;
+            justify-items: start;
+            gap: 8px;
+        }
+
+        .look-pose-button {
+            display: inline-flex;
+            min-height: 42px;
+            align-items: center;
+            gap: 10px;
+            padding: 0 14px 0 10px;
+            border: 0;
+            border-radius: 999px;
+            background: #f0f0f3;
+            color: #1d1d1f;
+            cursor: pointer;
+            font: inherit;
+            font-size: 13px;
+            transition: background 180ms ease, color 180ms ease;
+        }
+
+        .look-pose-button::before {
+            display: grid;
+            width: 18px;
+            height: 18px;
+            place-items: center;
+            border: 1px solid currentColor;
+            border-radius: 50%;
+            content: "+";
+            font-size: 15px;
+            line-height: 1;
+        }
+
+        .look-controls {
+            position: absolute;
+            top: 50%;
+            left: 18px;
+            display: grid;
+            gap: 10px;
+            transform: translateY(-50%);
+        }
+
+        .look-controls button {
+            display: grid;
+            width: 28px;
+            height: 28px;
+            place-items: center;
+            border: 0;
+            border-radius: 50%;
+            background: #f0f0f3;
+            color: #1d1d1f;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .look-visual {
+            position: relative;
+            display: grid;
+            min-height: 520px;
+            place-items: center;
+            transition: opacity 250ms ease;
+        }
+
+        .look-default-image {
+            display: block;
+            width: min(100%, 640px);
+            max-height: 520px;
+            object-fit: contain;
+        }
+
+        .look-panel.is-closed .look-content,
+        .look-panel.is-closed .look-visual {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .look-panel.is-closed .look-content {
+            display: none;
+        }
+
+        .look-panel-close:focus-visible,
+        .look-pose-button:focus-visible,
+        .look-controls button:focus-visible,
+        .look-fold-slider:focus-visible {
+            outline: 3px solid #06c;
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 700px) {
+            .look {
+                margin-top: 8px;
+                padding: 36px 16px 52px;
+            }
+
+            .look h2 {
+                width: 100%;
+                margin-bottom: 22px;
+                font-size: 30px;
+            }
+
+            .look-panel {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                min-height: auto;
+                padding: 52px 22px 28px;
+                border-radius: 20px;
+            }
+
+            .look-content {
+                width: 100%;
+            }
+
+            .look-controls {
+                top: auto;
+                right: 22px;
+                bottom: 28px;
+                left: auto;
+                grid-auto-flow: column;
+                transform: none;
+            }
+
+            .look-pose-list {
+                position: static;
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .look-pose-item {
+                width: 100%;
+            }
+
+            .look-visual {
+                min-height: 350px;
+            }
+
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .look *,
+            .look *::before,
+            .look *::after {
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .images img {
+                transition: none;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img class="apple-logo" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original">
+        <div class="categeries">
+            <span>Store</span>
+            <span>Mac</span>
+            <span>ipad</span>
+            <span>iphone</span>
+            <span>watch</span>
+            <span>AirPods</span>
+            <span>Tv & Home</span>
+            <span>Entertainment</span>
+            <span>Accessories</span>
+            <span>Support</span>
+        </div>
+        <div class="serch-shoping">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="50px" viewBox="0 0 15 44" >
+                <path d="M14.298,27.202l-3.87-3.87c0.701-0.929,1.122-2.081,1.122-3.332c0-3.06-2.489-5.55-5.55-5.55c-3.06,0-5.55,2.49-5.55,5.55 c0,3.061,2.49,5.55,5.55,5.55c1.251,0,2.403-0.421,3.332-1.122l3.87,3.87c0.151,0.151,0.35,0.228,0.548,0.228 s0.396-0.076,0.548-0.228C14.601,27.995,14.601,27.505,14.298,27.202z M1.55,20c0-2.454,1.997-4.45,4.45-4.45 c2.454,0,4.45,1.997,4.45,4.45S8.454,24.45,6,24.45C3.546,24.45,1.55,22.454,1.55,20z"></path>
+            </svg> 
+            <svg height="50px" viewBox="0 0 14 44" width="20px" xmlns="http://www.w3.org/2000/svg">
+                <path d="m11.3535 16.0283h-1.0205a3.4229 3.4229 0 0 0 -3.333-2.9648 3.4229 3.4229 0 0 0 -3.333 2.9648h-1.02a2.1184 2.1184 0 0 0 -2.117 2.1162v7.7155a2.1186 2.1186 0 0 0 2.1162 2.1167h8.707a2.1186 2.1186 0 0 0 2.1168-2.1167v-7.7155a2.1184 2.1184 0 0 0 -2.1165-2.1162zm-4.3535-1.8652a2.3169 2.3169 0 0 1 2.2222 1.8652h-4.4444a2.3169 2.3169 0 0 1 2.2222-1.8652zm5.37 11.6969a1.0182 1.0182 0 0 1 -1.0166 1.0171h-8.7069a1.0182 1.0182 0 0 1 -1.0165-1.0171v-7.7155a1.0178 1.0178 0 0 1 1.0166-1.0166h8.707a1.0178 1.0178 0 0 1 1.0164 1.0166z"></path>
+            </svg>
+        </div>
+    </div>
+    <div class="top-bar">
+        <div class="text">
+            <h4>iPhone Duo</h4>
+            <p>Hello, hello.</p>
+        </div>
+        <p class="Pre-order">Pre-order starting 5:30 PM IST on 16 October<br>
+                Available from 23 October</p>
+        
+        <div class="video-1">
+            <video id="media-hero-video" class="pin-offset play-initiated" preload="none" muted="" playsinline="" data-inline-media="" data-inline-media-basepath="/105/media/in/iphone-duo/2026/9305e4b9-72d9-4c05-9381-b572adadd5e5/anim/hero/" data-inline-media-pause-on-exit="false" data-load-timeout="3000" data-inline-media-unload-at-end="true" data-inline-media-plugins="ObjectFitFix,LoadTimeout,ReplayOnlyAX,UnloadVideo,AnimLoad,AnimPlay,ViewportSourceOnce" src="" aria-hidden="true" style="min-height: 0px; object-fit: fill;"></video>
+            <!-- <img src="https://www.apple.com/in/iphone-duo/images/overvie…a-hero/hero_startframe__fcol1x2us8i2_large_2x.jpg">
+            <img src="https://www.apple.com/in/iphone-duo/images/overvie…dia-hero/hero_endframe__gdt3l3spaqie_large_2x.jpg"> -->
+            <img class="iphon-duo"src="https://www.apple.com/in/iphone-duo/images/meta/iphone-duo_overview__bmsaaq50eyaa_og.png?202610070353">
+            <div class="price-callout" id="pricing">
+                <div>
+                    <p>From ₹299900.00*</p>
+                    <p>or ₹48817.00/mo. for 6 mo.‡</p>
+                </div>
+                <button type="button">View pricing</button>
+            </div>
+        </div>
+    </div>
+    <section class="highlights" aria-labelledby="highlights-title" data-aos="fade-up" data-aos-duration="800" data-aos-offset="80">
+        <nav class="highlights-nav" aria-label="iPhone Duo navigation">
+            <strong>iPhone Duo</strong>
+            <div class="highlights-nav-actions">
+                <a href="#highlights-title">Explore</a>
+                <a href="#pricing">View pricing</a>
+            </div>
+        </nav>
+
+        <div class="highlights-heading">
+            <h2 id="highlights-title">Get the highlights.</h2>
+            <a class="watch-film" href="https://www.apple.com/105/media/in/iphone-duo/2026/9305e4b9-72d9-4c05-9381-b572adadd5e5/films/product/iphone-duo-product-tpl-in-2026_16x9.m3u8">Watch the film <span aria-hidden="true" class="icon icon-after icon-playcircle"></span></a>
+        </div>
+
+        <div class="highlights-carousel">
+            <div class="highlights-viewport" aria-label="iPhone Duo highlights">
+                <div class="highlights-track">
+                <article class="highlight-card" id="highlight-card-1" data-aos="fade-up" data-aos-duration="700" data-aos-delay="50">
+                    <h3>The largest iPhone display ever.<br>In a thin, foldable design.</h3>
+                    <div class="device-demo" aria-hidden="true">
+                        <img src="https://www.apple.com/in/iphone-duo/images/overview/highlights/display__bx48n0ntsgvm_large_2x.jpg" alt="">
+                    </div>
+                </article>
+
+                <article class="highlight-card">
+                    <h3>More ways to iPhone.<br>Reimagined iOS experiences for<br> ultimate versatility.</h3>
+                    <div class="device-demo" aria-hidden="true">
+                        <img src="https://www.apple.com/in/iphone-duo/images/overview/highlights/highlights_versatility_startframe__c304897cgcwi_large_2x.jpg" alt="">
+                    </div>
+                </article>
+
+                <article class="highlight-card">
+                    <h3>Titanium frame and hinge cover.<br>Beautiful and durable.</h3>
+                    <img src="https://www.apple.com/v/iphone-duo/c/images/overview/highlights/highlights_durability_endframe__e2gc60lhc5me_large_2x.jpg" alt="">
+                </article>
+
+                <article class="highlight-card">
+                    <h3>48MP Dual Fusion camera system. And<br> all‑new ways to shoot from front to back.</h3>
+                    <div class="device-demo" aria-hidden="true">
+                        <img src="https://www.apple.com/v/iphone-duo/c/images/overview/highlights/camera__bbxzc8mkt6g2_large.jpg" alt="">
+                    </div>
+                </article>
+                
+                <article class="highlight-card">
+                    <h3>Vapour‑cooled A20 Pro chip for<br> pro performance.</h3>
+                    <div class="device-demo" aria-hidden="true">
+                        <img src="https://www.apple.com/v/iphone-duo/c/images/overview/highlights/highlights_chip_endframe__eckq8spbb2mq_large_2x.jpg" alt="">
+                    </div>
+                </article>
+
+                <article class="highlight-card">
+                    <h3>Dual-battery system.<sup>1</sup><br>All‑day power.</h3>
+                    <div class="device-demo" aria-hidden="true">
+                        <img src="https://www.apple.com/v/iphone-duo/c/images/overview/highlights/highlights_battery_endframe__lj0gaudp97em_large_2x.jpg" alt="">
+                    </div>
+                </article>
+                
+                <article class="highlight-card">
+                    <h3>Meet Siri AI. Your AI assistant.<br>More personal. More powerful.</h3>
+                    <p>Siri AI is rolling out in English.<sup>2</sup></p>
+                    <div class="device-demo" aria-hidden="true">
+                        <img src="https://www.apple.com/in/iphone-duo/images/overview/highlights/siri__bklrx9fgx0pe_large_2x.jpg" alt="">
+                    </div>
+                </article>
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <div class="carousel-dots" aria-label="Choose a highlight"></div>
+                <button class="carousel-play" type="button" aria-label="Play highlights" aria-pressed="false">▶</button>
+            </div>
+        </div>
+    </section>
+    <div class="design">
+        <div class="textes">
+            <h5 class="body-text">Foldable design</h5>
+            <p class="headline">A new iPhone<br> enters the fold.</p>
+            <h5 class="body-text">Introducing iPhone Duo, the first foldable iPhone. When open, it’s the thinnest iPhone with <strong>the <br>largest display ever — 50% larger than iPhone 18 Pro Max.</strong> And it has an outer display with<br> more than 90% of the screen area of iPhone 18 Pro. Through reimagined iOS experiences, it<br> offers unparalleled versatility in all-new poses and orientations. All in a durable, pocketable <br>design. It’s an iPhone unlike any iPhone.</h5>
+        
+        </div>
+        <div class="images">
+            <img class="is-active" src="https://www.apple.com/in/iphone-duo/images/overview/design/design_endframe__csvxe3ut4a6a_large.jpg" alt="Night Sky iPhone Duo in open position">
+            <img src="https://www.apple.com/in/iphone-duo/images/overview/design/design_hero__gczn1e74mwa6_large_2x.jpg" alt="Star White iPhone Duo in open position" aria-hidden="true">
+        </div>
+        <div class="colornav-wrapper" data-gallery-id="design-fade-gallery-1">
+			<fieldset class="colornav colornav-neutral" aria-label="Choose a finish" data-nav-type="colornav">
+				<ul class="colornav-items">
+					<li class="colornav-item" data-gallery-index="0">
+					    <input type="radio" name="design-fade-gallery-1-colornav" class="colornav-value" id="design-fade-gallery-1-colornav-0" value="night-sky" data-gallery-index="0" aria-controls="design-fade-gallery-1-gallery-item-0" aria-label="Night Sky" autocomplete="off" checked="">
+						<label for="design-fade-gallery-1-colornav-0" class="colornav-link" aria-hidden="true">
+                            <span class="colornav-swatch colornav-swatch-night-sky">
+                                <span class="colornav-label">Night Sky</span>
+                            </span>
+                        </label>
+					</li>
+					<li class="colornav-item" data-gallery-index="1">
+						<input type="radio" name="design-fade-gallery-1-colornav" class="colornav-value" id="design-fade-gallery-1-colornav-1" value="star-white" data-gallery-index="1" aria-controls="design-fade-gallery-1-gallery-item-1" aria-label="Star White" autocomplete="off">
+						<label for="design-fade-gallery-1-colornav-1" class="colornav-link" aria-hidden="true">
+                            <span class="colornav-swatch colornav-swatch-star-white">
+                                <span class="colornav-label">Star White</span>
+                            </span>
+                        </label>
+					</li>
+				</ul>
+			</fieldset>
+		</div>
+        <section class="look" aria-labelledby="look-title">
+            <h2 id="look-title">Take a closer look.</h2>
+            <div class="look-panel" data-look-state="default">
+                <button class="look-panel-close" type="button" aria-label="Close product view" aria-expanded="true">×</button>
+
+                <div class="look-content">
+                    <div class="look-intro">
+                        <p><strong>Foldable design.</strong> Offers exceptional viewing experiences in a design that fits in your pocket.</p>
+                        <label class="look-fold-instruction" for="look-fold-slider">Drag below to open and close</label>
+                        <input class="look-fold-slider" id="look-fold-slider" type="range" min="0" max="100" value="36" aria-label="Open and close iPhone Duo" aria-valuetext="Partially open" data-look-fold-slider>
+                    </div>
+
+                    <ul class="look-pose-list" aria-label="Explore iPhone Duo poses">
+                        <li class="look-pose-item">
+                            <button class="look-pose-button" id="look-pose-landscape" type="button" data-look-pose="landscape" data-look-image="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTnhbO0SGbMA2AM-678onPN8DTDlcHxoVA9atpVQSU_V4-m3wom" aria-controls="look-default-image" aria-pressed="false">Landscape</button>
+                        </li>
+                        <li class="look-pose-item">
+                            <button class="look-pose-button" id="look-pose-portrait" type="button" data-look-pose="portrait" data-look-image="https://www.apple.com/in/iphone-duo/images/overview/product-viewer/portrait__15lry9l2g8ye_large.jpg" aria-controls="look-default-image" aria-pressed="false">Portrait</button>
+                        </li>
+                        <li class="look-pose-item">
+                            <button class="look-pose-button" id="look-pose-closed" type="button" data-look-pose="closed" data-look-image="https://www.apple.com/v/iphone-duo/e/images/overview/product-viewer/closed__3le61imm1w2e_large_2x.jpg" aria-controls="look-default-image" aria-pressed="false">Closed</button>
+                        </li>
+                        <li class="look-pose-item">
+                            <button class="look-pose-button" id="look-pose-seated" type="button" data-look-pose="seated" data-look-image="https://www.apple.com/v/iphone-duo/e/images/overview/product-viewer/laptop__c7kl6vmsqd6q_large_2x.jpg" aria-controls="look-default-image" aria-pressed="false">Seated</button>
+                        </li>
+                        <li class="look-pose-item">
+                            <button class="look-pose-button" id="look-pose-standing" type="button" data-look-pose="standing" data-look-image="https://www.apple.com/v/iphone-duo/e/images/overview/product-viewer/tent__68ysumotbs2m_large_2x.jpg" aria-controls="look-default-image" aria-pressed="false">Standing</button>
+                        </li>
+                        <li class="look-pose-item">
+                            <button class="look-pose-button" id="look-pose-durability" type="button" data-look-pose="durability" data-look-image="https://www.apple.com/v/iphone-duo/e/images/overview/product-viewer/durability__d8uh14wcv2oi_large_2x.jpg" aria-controls="look-default-image" aria-pressed="false">Durability</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="look-controls" aria-label="Browse poses">
+                    <button type="button" data-look-step="-1" aria-label="Previous pose">↑</button>
+                    <button type="button" data-look-step="1" aria-label="Next pose">↓</button>
+                </div>
+
+                <div class="look-visual">
+                    <img class="look-default-image" id="look-default-image" src="https://media.licdn.com/dms/image/v2/D5622AQE6nTbsbOuBaA/feedshare-shrink_800/B56aCKcVntIsAc-/0/1789029079859?e=2147483647&v=beta&t=3U_E3dUQQVeKxkBujL7QwBvFV4E3hkVH5cQnhrtBMCU" alt="iPhone Duo in landscape pose">
+                </div>
+            </div>
+        </section>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const highlights = document.querySelector(".highlights");
+        const highlightsNav = document.querySelector(".highlights-nav");
+        const highlightsCarousel = document.querySelector(".highlights-carousel");
+        const highlightsTrack = document.querySelector(".highlights-track");
+        const highlightCards = [...document.querySelectorAll(".highlight-card")];
+        const dotsContainer = document.querySelector(".carousel-dots");
+        const playButton = document.querySelector(".carousel-play");
+        const designGallery = document.querySelector('[data-gallery-id="design-fade-gallery-1"]');
+        const designImages = [...document.querySelectorAll(".design .images img")];
+        const lookPanel = document.querySelector(".look-panel");
+        const lookPoseButtons = [...document.querySelectorAll("[data-look-pose]")];
+        const lookFoldSlider = document.querySelector("[data-look-fold-slider]");
+        const lookDefaultImage = document.querySelector(".look-default-image");
+        let activeHighlight = 0;
+        let autoplayTimer;
+        let isPlaying = false;
+        let autoPlayStarted = false;
+        let highlightsNavPlaceholder;
+
+        function selectDesignImage(option) {
+            const selectedIndex = Number(option.dataset.galleryIndex);
+            designImages.forEach((image, index) => {
+                const isActive = index === selectedIndex;
+                image.classList.toggle("is-active", isActive);
+                image.setAttribute("aria-hidden", String(!isActive));
+            });
+        }
+
+        designGallery.querySelectorAll(".colornav-value").forEach((option) => {
+            option.addEventListener("change", () => {
+                if (option.checked) selectDesignImage(option);
+            });
+        });
+        const selectedDesignOption = designGallery.querySelector(".colornav-value:checked");
+        if (selectedDesignOption) selectDesignImage(selectedDesignOption);
+
+        const showLookImage = (src, alt) => {
+            lookDefaultImage.src = src;
+            lookDefaultImage.alt = alt;
+        };
+
+        const selectLookPose = (button) => {
+            lookPoseButtons.forEach((poseButton) => {
+                poseButton.setAttribute("aria-pressed", String(poseButton === button));
+            });
+            lookPanel.dataset.lookState = button.dataset.lookPose;
+            showLookImage(button.dataset.lookImage, `iPhone Duo in ${button.textContent.trim().toLowerCase()} pose`);
+        };
+
+        lookPoseButtons.forEach((button) => {
+            button.addEventListener("click", () => selectLookPose(button));
+        });
+
+        lookFoldSlider.addEventListener("input", () => {
+            const isClosed = Number(lookFoldSlider.value) <= 25;
+            lookPoseButtons.forEach((button) => {
+                button.setAttribute("aria-pressed", "false");
+            });
+            lookPanel.dataset.lookState = "default";
+            showLookImage(
+                (isClosed ? lookPoseButtons.find((button) => button.dataset.lookPose === "closed") : lookPoseButtons[0]).dataset.lookImage,
+                `iPhone Duo ${isClosed ? "closed" : "open"}`
+            );
+            lookFoldSlider.setAttribute("aria-valuetext", isClosed ? "Closed" : Number(lookFoldSlider.value) === 100 ? "Open" : "Open");
+        });
+
+        document.querySelectorAll("[data-look-step]").forEach((stepButton) => {
+            stepButton.addEventListener("click", () => {
+                const activeIndex = lookPoseButtons.findIndex((button) => button.getAttribute("aria-pressed") === "true");
+                const step = Number(stepButton.dataset.lookStep);
+                const nextIndex = activeIndex < 0
+                    ? (step > 0 ? 0 : lookPoseButtons.length - 1)
+                    : (activeIndex + step + lookPoseButtons.length) % lookPoseButtons.length;
+                selectLookPose(lookPoseButtons[nextIndex]);
+            });
+        });
+
+        const lookCloseButton = document.querySelector(".look-panel-close");
+        lookCloseButton.addEventListener("click", () => {
+            const isOpen = lookCloseButton.getAttribute("aria-expanded") === "true";
+            lookCloseButton.setAttribute("aria-expanded", String(!isOpen));
+            lookCloseButton.setAttribute("aria-label", isOpen ? "Open product view" : "Close product view");
+            lookCloseButton.textContent = isOpen ? "+" : "×";
+            lookPanel.classList.toggle("is-closed", isOpen);
+        });
+
+        const revealVisibleCards = () => {
+            const sectionTop = highlights.getBoundingClientRect().top;
+            const triggerPoint = window.innerHeight * 0.82;
+
+            if (sectionTop < triggerPoint && !highlights.classList.contains("is-visible")) {
+                highlights.classList.add("is-visible");
+                highlightCards.forEach((card, index) => {
+                    const delay = index * 90;
+                    setTimeout(() => card.classList.add("is-visible"), delay);
+                });
+            }
+
+            const navTop = highlightsNav.getBoundingClientRect().top;
+            const shouldPinNav = navTop <= 18;
+
+            if (!highlightsNavPlaceholder && shouldPinNav) {
+                const navRect = highlightsNav.getBoundingClientRect();
+                const navStyle = getComputedStyle(highlightsNav);
+                highlightsNavPlaceholder = document.createElement("div");
+                highlightsNavPlaceholder.setAttribute("aria-hidden", "true");
+                highlightsNavPlaceholder.style.width = navStyle.width;
+                highlightsNavPlaceholder.style.height = `${navRect.height}px`;
+                highlightsNavPlaceholder.style.margin = `0 auto ${navStyle.marginBottom}`;
+                highlightsNav.before(highlightsNavPlaceholder);
+                document.body.append(highlightsNav);
+                highlightsNav.classList.add("is-fixed");
+                requestAnimationFrame(() => highlightsNav.classList.add("is-visible"));
+            } else if (highlightsNavPlaceholder && highlightsNavPlaceholder.getBoundingClientRect().top > 18) {
+                highlightsNavPlaceholder.before(highlightsNav);
+                highlightsNavPlaceholder.remove();
+                highlightsNavPlaceholder = undefined;
+                highlightsNav.classList.remove("is-fixed", "is-visible");
+            }
+        };
+
+        const highlightObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    revealVisibleCards();
+                    highlightObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.2,
+            rootMargin: "0px 0px -10% 0px"
+        });
+
+        highlightObserver.observe(highlights);
+
+        highlightCards.forEach((card, index) => {
+            card.tabIndex = 0;
+            card.setAttribute("role", "button");
+            card.setAttribute("aria-label", `Show highlight ${index + 1}: ${card.querySelector("h3").textContent.trim()}`);
+            card.addEventListener("click", () => showHighlight(index));
+            card.addEventListener("keydown", (event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    showHighlight(index);
+                }
+            });
+
+            const dot = document.createElement("button");
+            dot.className = "carousel-dot";
+            dot.type = "button";
+            dot.setAttribute("aria-label", `Show highlight ${index + 1}`);
+            dot.setAttribute("aria-current", index === 0 ? "true" : "false");
+            dot.addEventListener("click", () => showHighlight(index));
+            dotsContainer.append(dot);
+        });
+
+        function showHighlight(index) {
+            activeHighlight = (index + highlightCards.length) % highlightCards.length;
+            const gap = Number.parseFloat(getComputedStyle(highlightsTrack).columnGap) || 0;
+            const offset = activeHighlight * (highlightCards[0].getBoundingClientRect().width + gap);
+            highlightsTrack.style.transform = `translate3d(-${offset}px, 0, 0)`;
+
+            dotsContainer.querySelectorAll(".carousel-dot").forEach((dot, dotIndex) => {
+                dot.setAttribute("aria-current", dotIndex === activeHighlight ? "true" : "false");
+                dot.classList.toggle("is-playing", isPlaying && dotIndex === activeHighlight);
+            });
+
+            if (isPlaying) {
+                window.clearTimeout(autoplayTimer);
+                autoplayTimer = window.setTimeout(() => showHighlight(activeHighlight + 1), 3500);
+            }
+        }
+
+        function startAutoplay() {
+            if (isPlaying || autoplayTimer) {
+                return;
+            }
+
+            isPlaying = true;
+            autoPlayStarted = true;
+            playButton.textContent = "⏸";
+            playButton.setAttribute("aria-label", "Pause highlights");
+            playButton.setAttribute("aria-pressed", "true");
+            showHighlight(activeHighlight);
+        }
+
+        function stopAutoplay() {
+            isPlaying = false;
+            autoPlayStarted = false;
+            window.clearTimeout(autoplayTimer);
+            autoplayTimer = undefined;
+            dotsContainer.querySelectorAll(".carousel-dot").forEach((dot) => dot.classList.remove("is-playing"));
+            playButton.textContent = "▶";
+            playButton.setAttribute("aria-label", "Play highlights");
+            playButton.setAttribute("aria-pressed", "false");
+        }
+
+        playButton.addEventListener("click", () => {
+            if (autoplayTimer) {
+                stopAutoplay();
+                return;
+            }
+
+            startAutoplay();
+        });
+
+        const highlightCarouselObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting && !autoPlayStarted) {
+                    startAutoplay();
+                }
+            });
+        }, {
+            threshold: 0.35
+        });
+
+        highlightCarouselObserver.observe(highlightsCarousel);
+
+        window.addEventListener("scroll", revealVisibleCards, { passive: true });
+        window.addEventListener("load", revealVisibleCards);
+        window.addEventListener("resize", () => showHighlight(activeHighlight));
+        revealVisibleCards();
+    </script>
+</body>
+</html>
